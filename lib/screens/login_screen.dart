@@ -101,6 +101,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
 
+import 'package:ecosoulquerytracker/screens/Tabscreen/DashboardScreen.dart';
+import 'package:ecosoulquerytracker/screens/dash.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/auth_service.dart';
@@ -149,7 +151,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => MainScreen()),
+        //MaterialPageRoute(builder: (_) => MainScreen()),
+        //MaterialPageRoute(builder: (_) => DashboardScreen()),
+        MaterialPageRoute(builder: (_) => NewDashScreen()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(

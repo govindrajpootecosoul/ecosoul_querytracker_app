@@ -1,4 +1,5 @@
 import 'package:ecosoulquerytracker/screens/Tabscreen/mainscrentab.dart';
+import 'package:ecosoulquerytracker/screens/dash.dart';
 import 'package:ecosoulquerytracker/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,7 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
     if (isLoggedIn) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => MainScreen()),
+        MaterialPageRoute(builder: (_) => NewDashScreen()),
+       // MaterialPageRoute(builder: (_) => MainScreen()),
       );
     } else {
       Navigator.pushReplacement(

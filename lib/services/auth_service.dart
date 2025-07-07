@@ -1,12 +1,15 @@
 import 'dart:convert';
+import 'package:ecosoulquerytracker/api_config.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthService {
-  final String baseUrl = 'http://192.168.50.92:5100/api'; // <-- Replace if different
+  //final String baseUrl = 'http://192.168.50.92:5100/api'; // <-- Replace if different
 
   Future<Map<String, dynamic>?> login(String email, String password) async {
-    var request = http.Request('POST', Uri.parse('$baseUrl/signin'));
+    //var request = http.Request('POST', Uri.parse('$baseUrl/signin'));
+    var request = http.Request('POST', Uri.parse(ApiConfig.signin));
+    //var request = http.Request('POST', Uri.parse("https://query.thrivebrands.ai/api/signin"));
     request.headers['Content-Type'] = 'application/json';
     request.body = jsonEncode({
       'email': email,

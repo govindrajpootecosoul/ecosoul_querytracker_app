@@ -1,0 +1,21 @@
+class ApiConfig {
+  // Base URL
+  //static const String baseUrl = 'http://10.175.83.131:5100/api';
+
+  static const String baseUrl = 'https://query.thrivebrands.ai/api';
+  //https://query.thrivebrands.ai
+//
+
+  // Endpoints
+  static const String signin = '$baseUrl/signin';
+  static const String signup = '$baseUrl/signup';
+  static const String statuscount = '$baseUrl/overall';
+  static const String users_list = '$baseUrl/users';
+  static const String users_name_list = '$baseUrl/registration/usernames';
+  static const String all_query_list = '$baseUrl/registration';
+  static const String delete_query = '$baseUrl/delete';
+  static const String all_users_auth = '$baseUrl/usersall_details';
+  static const String add_query = '$baseUrl/register';
+  static const String update_query = '$baseUrl/update';
+
+}

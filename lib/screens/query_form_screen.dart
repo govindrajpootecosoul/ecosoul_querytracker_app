@@ -458,19 +458,19 @@ class _RegistrationFormState extends State<RegistrationForm> {
     super.initState();
     if (widget.existingData != null) {
       final data = widget.existingData!;
-      platform = data['platform'];
+      platform = data['Platform'];
       status = data['status'];
-      nameController.text = data['name'] ?? '';
-      contactController.text = data['contact']?.replaceAll('+91 ', '') ?? '';
-      emailController.text = data['email'] ?? '';
-      companyController.text = data['company'] ?? '';
-      locationController.text = data['location'] ?? '';
-      queryController.text = data['query'] ?? '';
-      remarkController.text = data['remark'] ?? '';
-      _selectedUserId = data['assignedTo'];
-      dateReceived = DateTime.tryParse(data['dateReceived'] ?? '') ?? DateTime.now();
-      callingDate = data['callingDate'] != null && data['callingDate'] != 'Not Set'
-          ? DateTime.tryParse(data['callingDate'])
+      nameController.text = data['Customer Name'] ?? '';
+      contactController.text = data['Contact Number']?.replaceAll('+91 ', '') ?? '';
+      emailController.text = data['Email ID'] ?? '';
+      companyController.text = data['Company Name'] ?? '';
+      locationController.text = data['Location'] ?? '';
+      queryController.text = data['Query'] ?? '';
+      remarkController.text = data['Remark'] ?? '';
+      _selectedUserId = data['Query Assigned To'];
+      dateReceived = DateTime.tryParse(data['Date & Time Added'] ?? '') ?? DateTime.now();
+      callingDate = data['Query Resolved Date'] != null && data['Query Resolved Date'] != 'Not Set'
+          ? DateTime.tryParse(data['Query Resolved Date'])
           : null;
     }
     fetchUsers();

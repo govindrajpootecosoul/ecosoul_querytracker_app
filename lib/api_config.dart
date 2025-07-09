@@ -1,8 +1,8 @@
 class ApiConfig {
   // Base URL
-  //static const String baseUrl = 'http://10.175.83.131:5100/api';
+  static const String baseUrl = 'http://192.168.50.92:5100/api';
 
-  static const String baseUrl = 'https://query.thrivebrands.ai/api';
+  //static const String baseUrl = 'https://query.thrivebrands.ai/api';
   //https://query.thrivebrands.ai
 //
 

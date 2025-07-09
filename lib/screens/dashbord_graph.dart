@@ -308,7 +308,7 @@ class _DashboardGraphScreenState extends State<DashboardGraphScreen> {
       final closeRes = await dio.get(baseUrl, queryParameters: {
         'id': id,
         'userType': userType,
-        'status': 'close',
+        'status': 'closed',
       });
 
       if (openRes.statusCode == 200 && closeRes.statusCode == 200) {
@@ -339,11 +339,11 @@ class _DashboardGraphScreenState extends State<DashboardGraphScreen> {
         final query = entry.value;
         return DataRow(cells: [
           DataCell(Text((index + 1).toString())),
-          DataCell(Text(query['name'] ?? '')),
-          DataCell(Text(query['contact'] ?? '')),
-          DataCell(Text(query['email'] ?? '')),
-          DataCell(Text(query['company'] ?? '')),
-          DataCell(Text(query['query'] ?? '')),
+          DataCell(Text(query['Customer Name'] ?? '')),
+          DataCell(Text(query['Contact Number'] ?? '')),
+          DataCell(Text(query['Email ID'] ?? '')),
+          DataCell(Text(query['Company Name'] ?? '')),
+          DataCell(Text(query['Query'] ?? '')),
           DataCell(const Icon(Icons.search)),
         ]);
       }).toList(),
